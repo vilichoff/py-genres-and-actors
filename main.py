@@ -1,7 +1,7 @@
 from db.models import Genre, Actor
 
 
-def main() -> QuerySet:
+def main() -> object:
 
     genres_to_create = ["Western", "Action", "Dramma"]
     for genre_name in genres_to_create:
