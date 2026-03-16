@@ -1,8 +1,7 @@
-import init_django_orm
 from db.models import Genre, Actor
 
 
-def main():
+def main() -> QuerySet:
 
     genres_to_create = ["Western", "Action", "Dramma"]
     for genre_name in genres_to_create:
@@ -32,4 +31,3 @@ def main():
     Actor.objects.filter(first_name="Scarlett").delete()
 
     return Actor.objects.filter(last_name="Smith").order_by("first_name")
-
