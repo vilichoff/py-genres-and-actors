@@ -1,11 +1,9 @@
-import init_django_orm
+import init_django_orm # noqa: F401
 from django.db.models import QuerySet
 from db.models import Genre, Actor
 
 
 def main() -> QuerySet:
-    init_django_orm.main()
-
     genres_to_create = [("Western",), ("Action",), ("Dramma",)]
     for (genre_name,) in genres_to_create:
         Genre.objects.create(name=genre_name)
